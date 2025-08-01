@@ -1,6 +1,8 @@
 # Gestor de Contraseñas en Flask 🔐
 
 Este es un proyecto personal desarrollado con Flask, enfocado en aprender sobre criptografía, seguridad informática y manejo seguro de contraseñas.
+Se puede ver en: https://passadmin.onrender.com/
+Ya que es la versión gratuita algunas peticiones pueden demorar hasta 50 segundos ya que el servidor se cae por inactividad.
 
 ## 🚀 Tecnologías utilizadas
 

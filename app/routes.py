@@ -19,7 +19,7 @@ def show_signup():
         new_user = User(username=form.username.data, password=form.master_key.data, email=form.email.data)
         db.session.add(new_user)
         db.session.commit()
-        flash("Create tu cuenta correctamente", category="success")
+        flash("Creaste tu cuenta correctamente", category="success")
         return redirect(url_for("index"))
     if form.errors != {}:
         for err_msg in form.errors:

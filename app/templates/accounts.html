@@ -21,7 +21,7 @@
     <div class="card w-75 container mb-3">
         <div class="card-body">
             <h5 class="card-title">{{ password.service }}</h5>
-            <p class="card-text">{{ password.link }}</p>
+            <p style="color: #000;" class="card-text">{{ password.link }}</p>
             <div class="d-flex justify-content-end">
                 <a onclick="copiarPassword({{ password.id }})" href="#" class="btn btn-success me-3" title="Copiar" style="color:#fff;"><i class="bi bi-clipboard2-plus-fill"></i></a>
                 <a href="{{url_for("edit_pass", id=password.id)}}" class="btn btn-primary me-3"><i title="Editar" class="bi bi-pencil-square"></i></a>

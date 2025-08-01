@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    PassAdmin
+{% endblock %}
+
+{% block head_extra %}
+     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
+{% endblock %}
+
+{% block content %}
+     <section class="hero">
+            <h1 class="display-4 fw-bold">🛡️ Gestor de Contraseñas Personal</h1>
+            <p class="lead mt-3">Un proyecto <span class="highlight">educativo</span> para practicar <strong>criptografía</strong> y <strong>seguridad informática</strong> usando <code>Flask</code> y <code>SQLite</code>.</p>
+            
+        </section>
+
+        <!-- Tecnología y Aviso -->
+        <section class="section">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card card-custom p-4 h-100">
+                        <h3>🔐 Tecnologías implementadas</h3>
+                        <ul class="mt-3">
+                            <li><strong>bcrypt</strong> para hash seguro de contraseñas.</li>
+                            <li><strong>Argon2</strong> como función de derivación de claves (KDF).</li>
+                            <li><strong>AES</strong> para cifrado simétrico de contraseñas.</li>
+                            <li>Protección contra ataques comunes y gestión segura de datos.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-custom p-4 h-100">
+                        <h3 class="text-warning">⚠️ Aviso importante</h3>
+                        <p class="mt-3">
+                            Este proyecto es <strong>exclusivamente educativo</strong>. No debe utilizarse para almacenar contraseñas reales ni en entornos productivos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objetivos -->
+        <section class="section">
+            <div class="card card-custom p-4">
+                <h3>📚 Objetivos del proyecto</h3>
+                <ul class="mt-3">
+                    <li>Aplicar criptografía moderna en un entorno web práctico.</li>
+                    <li>Mejorar habilidades en seguridad informática y desarrollo backend.</li>
+                    <li>Desarrollar una app segura con <code>Flask</code>, <code>SQLite</code> y buenas prácticas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Autor -->
+        <section class="section text-center">
+            <p class="mt-4">
+                👨‍💻 Desarrollado por <strong>Matías Garay</strong> como parte de un proceso autodidacta.<br>
+                Código fuente: <a href="https://github.com/matiasGaray/password-manager" target="_blank">[Repositorio GitHub]</a>
+            </p>
+        </section>
+    
+{% endblock%}

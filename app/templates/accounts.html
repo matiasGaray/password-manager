@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    PassAdmin - Mis cuentas
+{% endblock %}
+
+{% block head_extra %}
+     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/accounts.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center" style="color:#FFF;"> Mis cuentas </h1>
+    <div class="d-flex">
+        <a href="{{ url_for('new_pass') }}" class="btn btn-primary ms-auto me-3">Nueva contraseña</a>
+    </div>
+
+    <br>
+    <br>
+
+    {% for password in passwords %}
+    <div class="card w-75 container mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ password.service }}</h5>
+            <p class="card-text">{{ password.link }}</p>
+            <div class="d-flex justify-content-end">
+                <a onclick="copiarPassword({{ password.id }})" href="#" class="btn btn-success me-3" title="Copiar" style="color:#fff;"><i class="bi bi-clipboard2-plus-fill"></i></a>
+                <a href="{{url_for("edit_pass", id=password.id)}}" class="btn btn-primary me-3"><i title="Editar" class="bi bi-pencil-square"></i></a>
+                <a href="{{url_for("delete_pass", id=password.id)}}" class="btn btn-danger me-3"><i title="Eliminar" class="bi bi-trash3-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ url_for('static', filename='JS/copyPass.js') }}"></script>
+    
+{% endblock%}

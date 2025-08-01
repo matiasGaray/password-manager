@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Ingresar
+{% endblock %}
+
+{% block head_extra %}
+     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/login.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center" style="color:#FFF;"> Por favor ingresa a tu cuenta </h1>
+    <div class="container">
+    <form action="/login" method="POST">
+
+        {{form.hidden_tag()}}
+
+    <div class="mb-3">
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
+    </div>    
+    <div class="mb-3">
+        {{ form.master_key.label(class="form-label") }}
+        {{ form.master_key(class="form-control") }}
+    </div>
+    
+        {{form.submit(class="btn btn-primary")}}
+    </form>
+    </div>
+
+{% endblock%}

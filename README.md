@@ -32,6 +32,6 @@ pip install -r requirements.txt
 Usa un archivo .env como este:
 ```
 SECRET_KEY=clave_secreta
-DATABASE_URL=sqlite:///database.db
+DATABASE_URI=sqlite:///database.db
 ```
 
